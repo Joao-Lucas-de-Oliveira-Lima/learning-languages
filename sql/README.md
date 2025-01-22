@@ -552,11 +552,41 @@ ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY (referenced_co
 ```
 
 ## Filtered Search
-Perform filtered searches using conditional logic:
+Perform filtered searches using conditional logic to handle optional filters. For example:
+
 ```sql
-SELECT * FROM cars WHERE 
-(model ILIKE '%Pontiac%' OR model IS NULL) AND
-(make ILIKE '%Grand Prix%' OR make IS NULL)
+SELECT * FROM cars 
+WHERE 
+  (model ILIKE '%Pontiac%' OR model IS NULL) AND
+  (make ILIKE '%Grand Prix%' OR make IS NULL)
 ORDER BY model, make ASC;
 ```
-This query can be adapted for use with ORMs or APIs in database-driven applications.
+
+- This query demonstrates how to filter results based on specific criteria (`model` and `make`) while accommodating null values.
+- It can be adapted for use in database-driven applications with ORMs or APIs.
+
+---
+
+## Removing Duplicates in Paginated Queries
+
+When working with databases that may contain duplicate records for the same ID (e.g., due to design decisions such as avoiding intermediate tables), you can perform paginated queries while ignoring duplicates by using the following SQL clause:
+
+```sql
+SELECT DISTINCT ON (product_id) product_id, name, value 
+FROM product 
+ORDER BY product_id ASC 
+OFFSET 0 LIMIT 10;
+```
+
+### Explanation:
+- **`DISTINCT ON (product_id)`** ensures that only the first record for each unique `product_id` is included in the result set.
+- **`ORDER BY product_id ASC`** specifies the sorting order for selecting distinct values.
+- **`OFFSET 0 LIMIT 10`** enables pagination by retrieving a specific range of rows (e.g., the first 10 results).
+
+This approach is useful for maintaining data consistency in paginated responses while eliminating duplicates based on the `product_id`.
+
+---
+
+### Notes
+- The `DISTINCT ON` clause is specific to **PostgreSQL**. For other databases, alternative approaches may be needed, such as using subqueries or window functions.
+- These techniques can be seamlessly integrated into APIs or ORMs for efficient data retrieval in web applications.
