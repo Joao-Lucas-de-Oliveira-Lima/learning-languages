@@ -1,5 +1,5 @@
 services:
-  db:
+  postgres:
     image: postgres:latest
     container_name: local_pgdb
     restart: always
@@ -22,7 +22,6 @@ services:
       PGADMIN_DEFAULT_PASSWORD: password
     volumes:
       - pgadmin-data:/var/lib/pgadmin
-
 volumes:
   local_pgdata:
   pgadmin-data:
