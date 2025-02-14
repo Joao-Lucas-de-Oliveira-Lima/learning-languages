@@ -32,7 +32,7 @@ An excellent resource for generating mock data is [Mockaroo](https://www.mockaro
 
 ---
 
-### Unified Command Menu for Basic PSQL Operations
+### Command Menu
 
 #### Accessing PSQL
 - Open the psql terminal:
