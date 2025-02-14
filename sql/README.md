@@ -356,6 +356,7 @@ SELECT NOW();
 ```
 
 ### Date Arithmetic
+
 Perform operations on dates and times:
 ```sql
 SELECT NOW() + INTERVAL '10 DAYS'; -- Adds 10 days
@@ -363,6 +364,7 @@ SELECT NOW() - INTERVAL '1000 YEARS'; -- Subtracts 1000 years
 ```
 
 ### Casting Timestamps
+
 Convert timestamps to specific formats:
 ```sql
 SELECT NOW()::DATE; -- 'YYYY-MM-DD'
@@ -370,6 +372,7 @@ SELECT NOW()::TIME; -- 'HH:MM:SS'
 ```
 
 ### Extracting Date Parts
+
 Retrieve specific components of a date:
 ```sql
 SELECT EXTRACT(DOW FROM NOW());   -- Day of the week
@@ -377,6 +380,7 @@ SELECT EXTRACT(MONTH FROM NOW()); -- Month
 ```
 
 ### Calculating Age
+
 Calculate age based on a specific date:
 ```sql
 SELECT AGE(NOW(), date_of_birth) AS current_age 
@@ -389,6 +393,7 @@ ORDER BY current_age;
 ### Updating Data
 
 #### Update Specific Columns
+
 ```sql
 UPDATE users 
 SET first_name = 'New Name', email = 'newemail@example.com' 
@@ -396,6 +401,7 @@ WHERE id = 1000;
 ```
 
 #### Update All Rows
+
 ```sql
 UPDATE users SET first_name = 'Test';
 ```
@@ -403,16 +409,19 @@ UPDATE users SET first_name = 'Test';
 ### Deleting Data
 
 #### Delete Specific Rows
+
 ```sql
 DELETE FROM users WHERE id = 1000;
 ```
 
 #### Delete All Rows from a Table
+
 ```sql
 DELETE FROM users;
 ```
 
 ### Handling Conflicts
+
 Use `ON CONFLICT` to handle duplicate entries:
 ```sql
 INSERT INTO users (id, email) 
@@ -426,17 +435,20 @@ ON CONFLICT (id) DO NOTHING;
 ### Managing Constraints
 
 #### Removing Constraints
+
 ```sql
 ALTER TABLE users DROP CONSTRAINT constraint_name;
 ```
 
 #### Adding Constraints
+
 ```sql
 ALTER TABLE users ADD CONSTRAINT unique_username UNIQUE(username);
 ALTER TABLE users ADD CONSTRAINT users_pkey PRIMARY KEY(id);
 ```
 
 #### Defining ENUM-Like Constraints
+
 ```sql
 ALTER TABLE users ADD CONSTRAINT gender_check 
 CHECK(gender IN ('FEMALE', 'MALE', 'OTHER'));
@@ -445,6 +457,7 @@ CHECK(gender IN ('FEMALE', 'MALE', 'OTHER'));
 ### Working with NULL
 
 #### Proper NULL Comparison
+
 ```sql
 SELECT email 
 FROM users 
@@ -457,6 +470,7 @@ WHERE email IS NULL;
 ### Foreign Keys
 
 #### One-to-Many Relationship
+
 ```sql
 CREATE TABLE users (
     id BIGSERIAL PRIMARY KEY NOT NULL,
@@ -472,6 +486,7 @@ CREATE TABLE cars (
 ```
 
 #### One-to-One Relationship
+
 ```sql
 CREATE TABLE cars (
     id BIGSERIAL PRIMARY KEY NOT NULL,
@@ -492,6 +507,7 @@ JOIN cars ON users.id = cars.user_id;
 ```
 
 #### Selecting Specific Columns with INNER JOIN
+
 The inner join returns only rows with matches between tables.
 ```sql
 SELECT 
@@ -502,20 +518,30 @@ INNER JOIN cars ON users.id = cars.user_id;
 ```
 
 #### Left JOIN
-Left join includes unmatched rows from the left table with `NULL` values for columns from the right table.
+
+The `LEFT JOIN` returns **all rows from the left table** (the table mentioned before the `JOIN`) and the matching data from the right table. If there is no match in the right table, the values in those columns will be `NULL`.
+
 ```sql
-SELECT * 
-FROM users 
+SELECT *
+FROM users
 LEFT JOIN cars ON users.id = cars.user_id;
 ```
 
+**Example:**  
+If there are users who do not own a car, they will still appear in the result, but with `NULL` values for the car data.
+
 #### Right JOIN
-Right join includes unmatched rows from the right table with `NULL` values for columns from the left table.
+
+The `RIGHT JOIN` returns **all rows from the right table** (the table mentioned after the `JOIN`) and the matching data from the left table. If there is no match in the left table, the values in those columns will be `NULL`.
+
 ```sql
-SELECT * 
-FROM users 
+SELECT *
+FROM users
 RIGHT JOIN cars ON users.id = cars.user_id;
 ```
+
+**Example:**  
+If there are cars that are not associated with any user, they will still appear in the result, but with `NULL` values for the user data.
 
 ## Data Export and Extensions
 
@@ -674,3 +700,28 @@ Time: 16.214 ms
 ```
 
 In the example above, the CPU time to execute the query is the sum of Planning Time and Execution Time, totaling 6.463 ms. The remaining time is spent on communication between the database and the API (network time).
+
+## Loops in SQL
+
+To create a loop that prints a simple counter:
+
+```sql
+DO $$ 
+DECLARE 
+    counter INTEGER := 1; 
+BEGIN 
+    WHILE counter <= 5 LOOP 
+        RAISE NOTICE 'Counter: %', counter; 
+        counter := counter + 1; 
+    END LOOP; 
+END $$;
+```
+
+### Explanation:  
+
+- **`DO $$ ... $$;`**: Begins an anonymous procedural block.  
+- **`DECLARE counter INTEGER := 1;`**: Initializes the loop variable.  
+- **`WHILE counter <= 5 LOOP`**: Runs the loop while the condition is met.  
+- **`RAISE NOTICE 'Counter: %', counter;`**: Prints the counter value.  
+- **`counter := counter + 1;`**: Increments the counter.  
+- **`END LOOP;`**: Ends the loop.  
