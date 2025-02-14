@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        The 'loading' attribute with the value 'lazy' tells the browser to load the image 
+        only when it is about to be displayed in the viewport.
+        The actual behavior may vary depending on how the browser handles lazy loading.
+    -->
+    <img src="html.png" alt="HTML" loading="lazy" height="200" width="200">
+    <br>
+
+    <!-- 
+        The <caption> tag is used to add a caption to an element, whether it is an image or not.
+        For example, it can be used to add a caption to a <code> block.
+        It applies specific formatting to the element.
+    -->
+    <caption>
+        <img src="html.png" alt="HTML" loading="lazy" height="200" width="200">
+        <figcaption>HTML Symbol</figcaption>
+    </caption>
+
+    <!-- 
+        The <figcaption> element can be placed either before or after the target figure.
+    -->
+    <br>
+
+    <caption>
+        <figcaption>Code in HTML</figcaption>
+        <code>&lt;h1&gt;Some text&lt;/h1&gt;</code>
+    </caption>
+</body>
+</html>

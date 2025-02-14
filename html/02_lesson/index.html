@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <!-- Paragraph hierarchy. Each paragraph -->
+    <!-- An h2 tag should refer to an h1 tag above -->
+    <!-- An h3 tag should refer to an h2 tag above, and so on -->
+    <!-- This way, the text can be better interpreted by screen readers -->
+
+    <h1>Tasks to Accomplish</h1>
+    
+    <h2>Back-end Study</h2>
+    <p>There are many concepts to be studied in this area...</p>
+    <h3>APIs</h3>
+    <p>Types of APIs:<br />REST<br />GraphQL</p>
+    <hr />
+
+    <h2>Front-end Study</h2>
+    <p>
+      There are various important concepts in this area as well:<br />
+      HTML, CSS, JavaScript...
+    </p>
+    <hr />
+
+    <!-- Emphasis on phrases or words -->
+    <h2>Emphasis</h2>
+    <p>
+      The following text has semantic emphasis via the <code>&lt;em&gt;</code> tag and will be read differently by the browser:
+      <em>Text with emphasis</em>
+    </p>
+    <p>
+      Another way to add emphasis is using the <code>&lt;strong&gt;</code> tag: 
+      <strong>Text with strong emphasis</strong>
+    </p>
+    <p>
+      Emphasis is not just a visual effect, like bold or italic, but rather a semantic indication of content importance.
+    </p>
+
+    <h2>HTML Entities</h2>
+    <p>
+      In HTML, it is possible to display certain symbols using special notation, all starting with the character <code>&amp;</code>:<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To generate additional spaces.<br />
+      &lt; &gt; &copy; &reg; &trade; &amp; &mdash; &ndash;
+    </p>
+
+    <h2>Abbreviations</h2>
+    <p>
+      We can indicate abbreviations with their full meaning, for example: 
+      <abbr title="Application Programming Interface">API</abbr>
+    </p>
+    
+    <h2>Addresses</h2>
+    <p>
+      The <code>&lt;address&gt;</code> tag can be used to give semantic meaning to an address:
+    </p>
+    <address>
+      Street X<br />
+      City Y<br />
+      Country Z
+    </address>
+  </body>
+</html>

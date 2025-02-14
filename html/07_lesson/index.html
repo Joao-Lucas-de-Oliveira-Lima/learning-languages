@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tables</h1>
+    
+    <table>
+      <!-- Caption: provides a descriptive title for the table -->
+      <caption>
+        Example Table
+      </caption>
+
+      <thead>
+        <tr>
+          <!-- Column labels -->
+          <th scope="row">&nbsp;</th>
+          <th scope="row">Time</th>
+          <th scope="row">Temperature</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- The <tbody> tag contains the main content of the table -->
+        <!-- The <th> tag inside a <tr> acts as a label for the respective row -->
+        <tr>
+          <!-- The 'scope="row"' attribute specifies that this header applies to the entire row -->
+          <th scope="row">Monday</th>
+          <td>Item 1</td>
+          <td>Item 2</td>
+        </tr>
+        <tr>
+          <th scope="row">Tuesday</th>
+          <td>Item 3</td>
+          <td>Item 4</td>
+        </tr>
+        <tr>
+          <th scope="row">Wednesday</th>
+          <!-- The 'rowspan' attribute merges the current cell with the one directly below 
+               until it finds a row without the same rowspan value -->
+          <td rowspan="2">Item 5</td>
+          <td rowspan="2">Item 6</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <!-- The 'colspan' attribute makes this cell span across all three columns -->
+          <td colspan="3">End of table</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

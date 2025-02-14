@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Semantic meaning of elements -->
+    
+    <!-- The <hr> tag represents a thematic break or a change of topic -->
+    <hr />
+
+    <!-- 
+      A webpage can have multiple <header> sections.
+      The <header> tag can contain a <nav> element (navigation bar).
+    -->
+    <header>
+      <!-- The 'aria-label' attribute indicates that this navigation bar is the main navbar -->
+      <nav aria-label="main navigation">
+        <ul>
+          <li>
+            <a href="https://www.google.com.br/" target="_blank">Google</a>
+          </li>
+          <li>
+            <a href="https://www.bing.com/" target="_blank">Bing</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 
+      The <main> element represents the main content of the page.
+      There should be only one <main> section per page.
+    -->
+    <main>
+      <h1>Main Section</h1>
+
+      <!-- 
+        The <article> tag is used for self-contained and reusable content.
+        It can be read independently from the rest of the page.
+      -->
+      <article>
+        <h2>Windows System</h2>
+        <p>
+          Windows is an operating system developed by Microsoft, widely used on 
+          personal computers, servers, and embedded devices. It features an 
+          intuitive graphical interface, multitasking support, and compatibility 
+          with a wide range of software. Since its first release in 1985, it has 
+          evolved to offer greater security, performance, and cloud service 
+          integration. Popular versions include Windows XP, Windows 7, Windows 10, 
+          and Windows 11.
+        </p>
+      </article>
+
+      <!-- 
+        The <aside> element is used for content that is related to the page but not 
+        part of the main content. It can be placed inside or outside the <main> tag. 
+        It is commonly used for sidebars.
+      -->
+      <aside>
+        <!-- The <details> tag creates a collapsible content section -->
+        <details>
+            <!-- The <summary> tag provides a title for the collapsible content -->
+            <summary>Test</summary>
+            <p>Example content</p>
+        </details>
+      </aside>
+    </main>
+
+    <!-- 
+      The <footer> section is used for links to other websites (can also be a navigation bar) 
+      and typically contains copyright information.
+      A webpage can have multiple <footer> sections.
+    -->
+    <footer>&copy; 2024</footer>
+  </body>
+</html>

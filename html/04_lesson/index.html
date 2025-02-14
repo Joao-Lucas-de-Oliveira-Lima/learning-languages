@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <!-- Creating a navigation bar for elements within the same HTML page -->
+    <!-- The navigation bar below could also be used to store links to other HTML pages or external websites -->
+    <nav>
+      <ul>
+        <li>
+          <a href="#brazil">Brazil</a>
+        </li>
+        <li>
+          <a href="#canada">Canada</a>
+        </li>
+        <li>
+          <a href="#france">France</a>
+        </li>
+        <li>
+          <a href="#japan">Japan</a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Place Descriptions</h1>
+
+    <section id="japan">
+      <h2>Japan</h2>
+      <!-- When creating a link, avoid using non-descriptive names that lack semantic meaning for the reader, 
+           such as "click me" -->
+      <p>
+        A brief description of 
+        <a href="japan.html">Japan</a>
+      </p>
+      <!-- Avoid using the full URL for links when possible; prefer short, relative paths instead -->
+      <p>
+        More info about Japan on
+        <a href="https://en.wikipedia.org/wiki/Japan">Wikipedia</a>
+      </p>
+      <!-- To enable file downloads via a link, add the "download" attribute along with a valid file resource -->
+      <p>
+        Download the Japan picture
+        <a download href="japan_picture.jpg">here</a>
+      </p>
+      <!-- To return to the home page, use "/", which will navigate to the homepage -->
+      <p>Back to <a href="/">home</a></p>
+    </section>
+
+    <section id="brazil">
+      <h2>Brazil</h2>
+      <img
+        src="https://th-thumbnailer.cdn-si-edu.com/j4TtQdLfKFUpERnpZKqFs9639tg=/1000x750/filters:no_upscale():focal(1800x1200:1801x1201)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/40/5c/405cd7f1-4f1b-4198-a17c-714766358fec/alt_1-71399d4c-ee4c-4bb5-bc86-b26904c7a80c.jpg"
+        alt="Brazil"
+        width="300"
+      />
+      <p>
+        Brazil is the largest country in South America, known for its cultural diversity, natural beauty, and rich biodiversity.
+        With a population of over 200 million people, the country is home to iconic landscapes such as the Amazon Rainforest,
+        the Pantanal, and the stunning beaches of the Northeast. Additionally, Brazil is famous for its vibrant music scene, 
+        festivals like Carnival, and unique cuisine, featuring traditional dishes such as feijoada and pão de queijo.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="canada">
+      <img
+        src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/ayzqxln4h8lucshgzu3s"
+        alt="Canada"
+        width="300"
+      />
+      <h2>Canada</h2>
+      <p>
+        Canada is the second-largest country in the world by land area, renowned for its breathtaking landscapes, high quality of life, and cultural diversity.
+        With modern cities like Toronto, Vancouver, and Montreal, the country blends innovation with tradition. 
+        Its vast forests, crystal-clear lakes, and the Rocky Mountains attract nature lovers and adventurers alike. 
+        Moreover, Canada is known for its hospitality, harsh winters, and signature dishes like poutine and maple syrup.
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="france">
+      <h2>France</h2>
+      <img
+        src="https://i0.wp.com/thegoodlifefrance.com/wp-content/uploads/2021/03/Literary-tour-of-France.jpg?ssl=1"
+        alt="France"
+        width="300"
+      />
+      <p>
+        France is one of the most influential countries in the world, known for its rich history, sophisticated culture, and stunning landscapes. 
+        With iconic cities like Paris, Lyon, and Marseille, the country combines historic architecture, world-renowned gastronomy, and fine arts. 
+        Destinations such as the Eiffel Tower, the Louvre, and the French Riviera attract millions of visitors annually. 
+        Additionally, France is famous for its wine, cheese, and haute cuisine, making it a paradise for food lovers.
+      </p>
+    </section>
+  </body>
+</html>

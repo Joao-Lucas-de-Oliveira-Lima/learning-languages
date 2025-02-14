@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Form</title>
+  </head>
+  <body>
+    <!-- The API endpoint https://httpbin.org/get is used for testing HTTP requests.
+         When data is sent to this API, it returns a JSON response showing how the data was received. -->
+    
+    <!-- Creating a form -->
+    <!-- The submit button will trigger the request -->
+    <form action="https://httpbin.org/get" method="GET">
+      <!-- Fieldsets group related elements inside the form, improving structure and readability -->
+      <fieldset>
+        <legend>Example Form 1</legend>
+
+        <!-- Text input field -->
+        <p>
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            pattern="[a-zA-Z0-9]+"
+            required
+            autocomplete="on"
+            autofocus
+          />
+        </p>
+
+        <!-- Password input field -->
+        <p>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Your secret"
+          />
+        </p>
+
+        <!-- Phone input field -->
+        <p>
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="Phone number"
+            pattern="[0-9]{11}"
+          />
+        </p>
+
+        <!-- Number input field with a step interval of 10 -->
+        <p>
+          <label for="number">Number:</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            min="1930"
+            max="2025"
+            value="2000"
+            step="10"
+          />
+        </p>
+
+        <!-- Dropdown menu with grouped options -->
+        <p>
+          <label for="cardgame-1">Card Game:</label>
+          <select id="cardgame-1" name="cardgame" multiple>
+            <optgroup label="TCG">
+              <option value="magic" selected>Magic: The Gathering</option>
+              <option value="HearthStone">HearthStone</option>
+            </optgroup>
+            <optgroup label="OCG">
+              <option value="yugioh">Yu-Gi-Oh</option>
+              <option value="pokemon">Pokémon</option>
+              <option value="vanguard">Vanguard</option>
+            </optgroup>
+            <option value="other">Other</option>
+          </select>
+        </p>
+
+        <!-- Searchable dropdown list -->
+        <p>
+          <label for="cardgame-2">Card Game:</label>
+          <input type="text" list="cardgame-list" name="data-list" id="cardgame-2" />
+          <datalist id="cardgame-list">
+            <option value="magic">Magic: The Gathering</option>
+            <option value="HearthStone">HearthStone</option>
+            <option value="yugioh">Yu-Gi-Oh</option>
+            <option value="pokemon">Pokémon</option>
+            <option value="vanguard">Vanguard</option>
+            <option value="other">Other</option>
+          </datalist>
+        </p>
+      </fieldset>
+
+      <!-- Radio buttons (only one option can be selected) -->
+      <fieldset>
+        <legend>What is your favorite food?</legend>
+        <input type="radio" name="food" id="pizza" value="pizza" />
+        <label for="pizza">Pizza</label>
+        <input type="radio" name="food" id="rice-chicken" value="rice-chicken" />
+        <label for="rice-chicken">Rice with Chicken</label>
+        <input type="radio" name="food" id="other-food" value="other" />
+        <label for="other-food">Other</label>
+      </fieldset>
+
+      <!-- Checkbox inputs (multiple selections allowed) -->
+      <fieldset>
+        <legend>What is your favorite animal?</legend>
+        <input type="checkbox" name="animal" id="dog" value="dog" />
+        <label for="dog">Dog</label>
+        <input type="checkbox" name="animal" id="cat" value="cat" />
+        <label for="cat">Cat</label>
+        <input type="checkbox" name="animal" id="bird" value="bird" />
+        <label for="bird">Bird</label>
+        <input type="checkbox" name="animal" id="other-animal" value="other" />
+        <label for="other-animal">Other</label>
+      </fieldset>
+
+      <!-- Text area for longer text input -->
+      <fieldset>
+        <legend>Enter a message:</legend>
+        <label for="message">Message:</label>
+        <br />
+        <textarea name="message" placeholder="Type a message" cols="20" rows="10" id="message"></textarea>
+      </fieldset>
+
+      <!-- Submit button to send the form data -->
+      <button type="submit">Submit</button>
+      <!-- Reset button to clear all fields -->
+      <button type="reset">Reset</button>
+      <!-- Alternative submit button that sends data via POST instead of GET -->
+      <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit via POST</button>
+    </form>
+  </body>
+</html>
