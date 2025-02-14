@@ -1,3 +1,4 @@
+import extendingthread.MyCustomThread;
 import externalthread.ExternalThread;
 import racecondition.JavaLocalThread;
 import racecondition.JavaReentrantLock;
@@ -31,6 +32,11 @@ public class App {
 
         JavaReentrantLock javaReentrantLock = new JavaReentrantLock();
         javaReentrantLock.executeInteractableOperation();
+
+        MyCustomThread myCustomThread = new MyCustomThread();
+        myCustomThread.start();
+        
+    
     }
 
     // Declaring a basic Thread
