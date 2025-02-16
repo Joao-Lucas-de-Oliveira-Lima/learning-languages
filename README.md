@@ -4,6 +4,7 @@ This repository is used to save all the code for the languages that I am current
 
 ## Languages
 
+- HTML
 - Java
 - SQL
 
