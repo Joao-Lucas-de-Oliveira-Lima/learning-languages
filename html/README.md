@@ -49,6 +49,7 @@
 
 - **05_lesson**
   - Lazy loading images for better performance
+  - Figures
 
 - **06_lesson**
   - Semantic HTML
@@ -80,3 +81,4 @@
 - Ideally, an HTML document should maintain a header hierarchy up to `<h3>`.
 - Always prioritize semantic elements. Only use generic elements like `<div>` or `<span>` when there is no appropriate semantic alternative.
 - When sending form data to APIs, avoid using the GET method since all data will be exposed in the URL query parameters. Sensitive information, such as passwords and credit card details, should never be transmitted this way.
+- Each page must contain only one `<h1>` tag.

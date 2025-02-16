@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tables</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Pricing Table</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Tables</h1>
+    <h1>Product Pricing Table</h1>
     
     <table>
-      <!-- Caption: provides a descriptive title for the table -->
-      <caption>
-        Example Table
-      </caption>
-
+      <caption>Price List of Products</caption>
       <thead>
         <tr>
-          <!-- Column labels -->
-          <th scope="row">&nbsp;</th>
-          <th scope="row">Time</th>
-          <th scope="row">Temperature</th>
+          <th scope="col">Product</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Unit Price</th>
+          <th scope="col">Expiration Date</th>
         </tr>
       </thead>
-
       <tbody>
-        <!-- The <tbody> tag contains the main content of the table -->
-        <!-- The <th> tag inside a <tr> acts as a label for the respective row -->
         <tr>
-          <!-- The 'scope="row"' attribute specifies that this header applies to the entire row -->
-          <th scope="row">Monday</th>
-          <td>Item 1</td>
-          <td>Item 2</td>
+          <th scope="row" rowspan="3">Chocolate Bar</th>
+          <td>1</td>
+          <td>$5.00</td>
+          <td>2026-10-12</td>
         </tr>
         <tr>
-          <th scope="row">Tuesday</th>
-          <td>Item 3</td>
-          <td>Item 4</td>
+          <td>2</td>
+          <td>$9.50</td>
+          <td>2026-10-12</td>
         </tr>
         <tr>
-          <th scope="row">Wednesday</th>
-          <!-- The 'rowspan' attribute merges the current cell with the one directly below 
-               until it finds a row without the same rowspan value -->
-          <td rowspan="2">Item 5</td>
-          <td rowspan="2">Item 6</td>
+          <td>5</td>
+          <td>$22.00</td>
+          <td>2026-10-12</td>
+        </tr>
+        
+        <tr>
+          <th scope="row" rowspan="3">Frozen Pizza</th>
+          <td>1</td>
+          <td>$8.00</td>
+          <td>2025-06-15</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>$22.50</td>
+          <td>2025-06-15</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>$35.00</td>
+          <td>2025-06-15</td>
+        </tr>
+        
+        <tr>
+          <th scope="row" rowspan="3">Ground Coffee</th>
+          <td>1</td>
+          <td>$12.00</td>
+          <td>2027-04-20</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>$22.00</td>
+          <td>2027-04-20</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>$40.00</td>
+          <td>2027-04-20</td>
         </tr>
       </tbody>
-
       <tfoot>
         <tr>
-          <!-- The 'colspan' attribute makes this cell span across all three columns -->
-          <td colspan="3">End of table</td>
+          <td colspan="4">Prices subject to change without notice.</td>
         </tr>
       </tfoot>
     </table>

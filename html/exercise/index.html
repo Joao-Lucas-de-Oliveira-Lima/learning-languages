@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="João Lucas" />
+    <meta
+      name="description"
+      content="The official website for the Little Taco Shop"
+    />
+    <title>LTS - Home</title>
+    <link type="image/x-icon" href="favicon.png" rel="icon" />
+    <link type="text/css" href="style/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 id="index-header">Welcome to the Litle Taco Shop</h1>
+      <nav aria-label="main-navigation-bar">
+        <ul>
+          <li>
+            <a href="#about-lts"
+              >About <abbr title="Little Taco Store">LTS</abbr></a
+            >
+          </li>
+          <li><a href="#our-menu">Our Menu</a></li>
+          <li><a href="store-hours.html">Store Hours</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img
+          src="img/restaurant_table.avif"
+          alt="Two crispy tacos with beef, lettuce, and cheese on a plate, with salsa bottles and a Jarritos pineapple soda in the background."
+          loading="lazy"
+          width="400"
+          height="300"
+        />
+        <figcaption>Tacos and a Drink</figcaption>
+      </figure>
+    </header>
+    <hr />
+    <main>
+      <article id="about-lts">
+        <h2>About <abbr title="Little Taco Store">LTS</abbr></h2>
+        <p>
+          <abbr title="Little Taco Store">LTS</abbr> was founded in 2022. Our
+          shop was built from a <strong>love of tacos</strong> 🌮🌮🌮. We hope
+          our shop adds a unique and interesting place to our little town.
+        </p>
+        <aside>
+          <h3>Taco Trivia</h3>
+          <details>
+            <summary>When the Tacos first appear in United States?</summary>
+            <p>
+              Tacos first appeared in the U.S. around
+              <time datetime="1905">1905</time>, introduced by Mexican
+              immigrants. They gained popularity in the Southwest and later
+              evolved into Americanized versions, like hard-shell tacos in the
+              1950s.
+            </p>
+          </details>
+        </aside>
+      </article>
+      <article>
+        <h2 id="our-menu">Our Menu</h2>
+        <table>
+          <caption>
+            Our Tacos
+          </caption>
+          <thead>
+            <tr>
+              <th scope="row">Tacos</th>
+              <th scope="row">Qty</th>
+              <th scope="row">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="3">Crunchy</th>
+              <td>1</td>
+              <td>$1.50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>$2.50</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>$3.25</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="3">Soft</th>
+              <td>1</td>
+              <td>$2.00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>$3.50</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>$4.50</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Chips & Salsa $2</td>
+            </tr>
+          </tfoot>
+        </table>
+        <br />
+        <a href="#index-header">Back to Top</a>
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <p>Copyright &copy; The Little Taco Shop</p>
+    </footer>
+  </body>
+</html>
