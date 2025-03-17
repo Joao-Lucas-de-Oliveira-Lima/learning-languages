@@ -1,0 +1,52 @@
+/*
+The cursor property changes the type of cursor
+when hovering over the applied element.
+*/
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*
+Changes the element's color when the link has been visited.
+*/
+a:visited {
+    color: red;
+}
+
+/*
+- a:hover changes the element's color when the mouse is over it.
+- a:focus changes the element's color when it is focused,
+  such as when navigating via the Tab key.
+*/
+a:hover, a:focus {
+    color: cyan;
+}
+
+/*
+Changes the color of the element when the left mouse button
+is pressing the element.
+*/
+a:active {
+    color: darkred;
+}
+
+/*
+- Pseudo-classes can be overridden by others depending on their order,
+  even if they affect the element in different states.
+  
+  Example: If a:active appears before a:hover, pressing the mouse button
+  on the element will not change its color to the active state.
+  Instead, the color from a:hover will be applied.
+
+  Likewise, if a:visited appears after a:hover, even when the mouse is over
+  the element, the hover color will not be applied, only the visited color.
+*/
+
+/*
+An order where pseudo-classes do not override each other could be:
+1. a:visited
+2. a:hover
+3. a:active
+*/

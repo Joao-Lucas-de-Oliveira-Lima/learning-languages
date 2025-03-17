@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Iansui&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Iansui", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+p {
+    background-color: lightgray;
+}
+
+/* 
+Inline elements do not support the properties:
+height, width, margin-top, or margin-bottom. 
+
+To apply these successfully, use `display: block`.
+Inline elements automatically adjust their size to their content 
+and do not accept height or width values. 
+
+Vertical margins do not work, but horizontal margins function normally. 
+Inline elements do not create separate block boxes.
+*/
+
+.highlight {
+    background-color: gray;
+    height: 100px;
+    width: 200px;
+    max-height: 200px;
+    margin-top: 100px;
+    display: inline-block; /* Allows setting width, height, and margins while keeping inline behavior */
+}
+
+/* 
+To apply the properties to the element below, use `display: inline-block`.
+This allows the element to behave like an inline element 
+while retaining certain block element properties.
+Unlike block elements, it will not break into a new line 
+but will allow manual control of its size and margins.
+*/
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+    background-color: lightgray;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}

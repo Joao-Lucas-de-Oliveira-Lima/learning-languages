@@ -1,0 +1,68 @@
+h2 {
+    border: 1px solid black;
+    width: 50%;
+}
+
+/*
+   The percentage size is always relative to the parent element. 
+   If the parent element increases or decreases in size, the 
+   percentage-based dimensions of child elements will adjust accordingly.
+
+   If an h2 tag occupies 50% of its section container, which in turn occupies 100% of the available width, 
+   then reducing the section's width by half will also impact the h2 size. 
+   Compared to the previous section size, h2 would now be at 25%.
+*/
+
+section {
+    width: 50%;
+}
+
+/*
+   Absolute values, such as px (pixels), behave differently.
+   By default, the browser applies a predefined text size, 
+   which can be adjusted by the user via browser settings.
+   However, absolute values override these settings.
+
+   If a font size is set to 20px, it will remain 20px 
+   regardless of user preferences in the browser.
+*/
+
+p {
+    font-size: 20px;
+}
+
+/*
+   The 'rem' unit is a relative unit based on the root element.
+   1rem means "apply 1x the root element's font size."
+   2rem would be twice the root size, and so on.
+*/
+
+main {
+    font-size: 1.5rem;
+}
+
+/*
+   Relative to the font-size of the element (2em means 2 times the size of the current font).
+*/
+
+h1 {
+    border: 0.1rem solid black;
+    padding: 0.1rem;
+}
+
+/*
+   The 'ch' unit refers to the number of characters per line.
+*/
+
+p {
+    width: 70ch;
+}
+
+/*
+   Setting the body width to less than 100% will create a horizontal scrollbar. 
+   However, this is generally not a preferred effect among developers.
+*/
+
+body {
+    width: 90%;
+}

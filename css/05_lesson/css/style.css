@@ -1,0 +1,109 @@
+/*
+    Resetting the browser's CSS by applying basic default values to all elements in the browser
+*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*
+    Example of Border Box
+    The border-box property sets a maximum size. The values for padding, border, and margin are deducted from the element's total size.
+    In other words, if an element is 200px wide and has 20px padding, its total size will be 200px, not 220px.
+*/
+.border-box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background: pink;
+    font-size: 2rem;
+}
+
+/*
+    The content-box property sets a minimum size. The values for margin, border, and padding are added to the element's total size.
+*/
+.content-box {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    background: lightblue;
+    font-size: 2rem;
+    box-sizing: content-box;
+}
+
+.main-content {
+    font-size: 1rem;
+}
+
+.main-content h2{
+    border: 0.1rem solid black;
+    margin: 1em;
+}
+
+.main-content p {
+    border: 0.1rem solid black;
+    margin: 1em;
+}
+
+/*
+    Shortcut for margin and border properties
+    It is possible to apply different sizes for each value of border,
+    padding, and margin.
+*/
+
+.different-sizes {
+    border: dashed red 0.3rem;
+    padding: 1rem 2rem 1.5rem 0.5rem;
+    margin: 1em 2em 3em 4em;
+}
+
+/*
+    Below, different styles are defined for each side of the border,
+    allowing for more detailed customization.
+*/
+
+/*
+    The outline property creates a line between the border and the margin, but
+    does not consume additional space from the total element size.
+    Outline-offset adds a space between the border and the outline.
+*/
+
+.different-styles{
+    margin: 1rem;
+    padding: 2em;
+    border: 0.2rem solid red;
+    border-top-color: blue;
+    border-left: green dashed;
+    border-bottom: black solid;
+    outline: aquamarine 5px solid;
+    outline-offset: 0.3em;
+}
+
+/*
+    Creating a circle
+    The margin auto property applies margin values
+    to the left and right to center
+    the object horizontally, as shown below in .circle relative
+    to .circle-container.
+*/
+.circle {
+    margin: auto;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle-container{
+    margin: 1rem;
+    padding: 5rem;
+    border-style: groove;
+    border-color: black;
+    border-width: 1rem;
+}

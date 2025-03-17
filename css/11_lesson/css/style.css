@@ -1,0 +1,39 @@
+.right-side, .left-side {
+    width: 10rem;
+    height: 10rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side {
+    float: right;
+}
+
+.left-side {
+    float: left;
+}
+
+/* 
+   The 'clear' property defines the behavior of elements 
+   adjacent to floating elements. In the example below, 
+   the 'clear' class ensures that any following elements 
+   will be positioned below the floated ones, instead of 
+   next to them. This provides better layout control.
+*/
+.clear {
+    clear: both;
+}
+
+/* 
+   An alternative approach is using the 'overflow' property 
+   or a more modern technique, 'display: flow-root'. 
+   This allows the container to properly wrap around 
+   its floated children without needing an extra clearing element.
+*/
+.float-root {
+    display: flow-root;
+}

@@ -1,0 +1,119 @@
+/*
+    The background-color property can be shortened to just background
+*/
+body {
+    background: papayawhip;
+    color: darkblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*
+The rgb(red, green, blue) formula takes three parameters
+Each parameter can range from 0 to 255, and they're used to create colors
+Examples:
+rgb(255, 0, 0) = Red
+rgb(0, 255, 0) = Green
+rgb(0, 0, 255) = Blue
+rgb(0, 0, 0) = Black
+rgb(255, 255, 255) = White
+*/
+p {
+    color: rgb(255, 0, 0);
+    line-height: 1.5;
+    padding: 10px;
+    border-left: 3px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+The rgba(red, green, blue, alpha) formula is an extension of the rgb formula
+but adds a parameter called alpha channel that determines the opacity
+of the element. The value ranges from 0.0 to 1.0 where 0 means completely
+transparent and 1 means completely opaque.
+*/
+h3 {
+    color: rgba(24, 80, 90, 0.5);
+    padding: 10px 0;
+}
+
+/*
+Colors can also be specified using hexadecimal values
+as shown below.
+Examples:
+#ff0000 = Red
+#00ff00 = Green
+#0000ff = Blue
+#000000 = Black
+#ffffff = White
+
+It's also possible to use shorthands for hexadecimal colors
+that have paired values in their structure. Example:
+#ff0000 = #f00 = red
+#00ff00 = #0f0 = green
+#0000ff = #00f = blue
+#000000 = #000 = black
+#ffffff = #fff = white
+*/
+h2 {
+    color: #f0f;
+    border-bottom: 2px solid #f0f;
+    padding-bottom: 5px;
+}
+
+/*
+The hsl property can be used by specifying (hue, saturation, lightness)
+
+Saturation can be described as the intensity of a color.
+100% is pure color, no shades of gray.
+50% is 50% gray, but you can still see the color.
+0% is completely gray; you can no longer see the color.
+ 
+The lightness of a color can be described as how much light you want to give the color, 
+where 0% means no light (black), 50% means 50% light (neither dark nor light) 
+and 100% means full lightness (white).
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+*/
+.hsl {
+    color: hsl(0, 0%, 0%);
+}
+
+/*
+Just like the rgba property, there's an hsla property that also applies an alpha channel
+*/
+.hsla {
+    color: hsla(120, 100%, 50%, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: hsl(240, 100%, 20%);
+    margin-bottom: 30px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    padding: 10px;
+}
+
+aside {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: hsla(40, 100%, 90%, 0.5);
+    border-radius: 5px;
+}
+

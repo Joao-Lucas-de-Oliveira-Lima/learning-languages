@@ -1,0 +1,86 @@
+/*
+Class selector
+*/
+.gray {
+    color: gray;
+}
+
+/*
+ID selector
+*/
+#mock_1 {
+    background-color: yellow;
+}
+
+/*
+Tag selector
+*/
+h1 {
+    color: blue;
+}
+
+/*
+Multiple elements selector
+*/
+h1, h2 {
+    color: green;
+}
+
+/*
+Descendant selector
+Looking for span elements that are inside section elements,
+regardless of how many intermediate tags there are between them
+*/
+section span {
+    text-transform: uppercase;
+    background-color: yellow;
+}
+
+/*
+Universal selector. Selects everything on the page
+*/
+* {
+    font-family: monospace;
+}
+
+/* Border styling demonstration */
+body {
+    border: 1px solid black;
+    margin: 20px;
+}
+
+/* Inherited properties demonstration */
+main, section, article {
+    border: inherit; 
+    margin: 10px;
+}
+
+/* Box model demonstration */
+main {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/*
+Usage of the !important flag to override other properties
+Note: This should generally be avoided in production code
+*/
+h1 {
+    color: red !important;  
+}
+
+p {
+    line-height: 1.5;
+}
+
+aside {
+    font-style: italic;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+    border-left: 3px solid #ddd;
+}
+
+article {
+    padding: 15px;
+}

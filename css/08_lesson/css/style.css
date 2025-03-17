@@ -1,0 +1,40 @@
+/* Changes list markers to Roman numerals */
+.roman {
+    list-style-type: upper-roman;
+}
+
+/* Changes list markers to alphabetical letters */
+.alphabetical {
+    list-style-type: lower-alpha;
+    list-style-position: inside; /* Adjusts marker placement inside the list */
+}
+
+/* Removes default list styling, including markers and padding */
+.unstyled {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Uses a custom image as the list marker */
+.custom-marker {
+    list-style: square url('../images/checkmark.png') inside;
+}
+
+/* Changes the color for odd list items */
+.odd li:nth-child(odd) {
+    color: red;
+}
+
+/* Changes the color for even list items */
+.even li:nth-child(even) {
+    color: red;
+}
+
+/* Customizes all list markers globally */
+::marker {
+    color: blue;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets a custom text for markers */
+    /* content: 'Line >>'; */
+}
