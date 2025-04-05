@@ -85,6 +85,14 @@
 - `clear` property
 - `display: flow-root`
 
+### 12 - Columns
+- The `columns` property enables responsive multi-column layouts.
+- `column-rule` adds a separator line between columns.
+- `column-gap` sets the space between columns.
+- `break-inside: avoid;` prevents elements from breaking across columns.
+- `white-space: nowrap;` keeps the content of an element on a single line, avoiding line breaks when resizing.
+- `column-span: all;` allows an element to span across all columns.
+
 ## CSS Properties
 
 - `font-family`: Specifies a prioritized list of font family names and/or generic family names for the selected element. Given a font family, the browser will use the first font available on the user's system.

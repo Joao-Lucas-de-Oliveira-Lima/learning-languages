@@ -1,0 +1,55 @@
+* {
+    padding: none;
+    margin: 0;
+}
+
+body {
+    margin: 10px;
+}
+
+/*
+The rule below applies a multi-column layout to block elements, 
+adding responsiveness to the design.
+
+- `columns` is a shorthand for `column-count` and `column-width`.
+- `column-rule` adds a visual separator between columns, similar to `border`.
+- `column-gap` defines the spacing between columns.
+*/
+.columns {
+    columns: 4 2rem;
+    column-rule: 0.1em solid #000;
+    column-gap: 2rem;
+}
+
+/*
+Prevents this element from being split between columns,
+ensuring it stays whole within a single column.
+Useful for titles or blocks of content that must not break apart.
+*/
+.columns h2 {
+    background-color: #333;
+    color: white;
+    margin-top: 0;
+    padding: 1rem;
+    break-inside: avoid;
+}
+
+/*
+Makes this element span across all columns,
+ignoring the current column structure.
+Ideal for quotes or headings that need full-width emphasis.
+*/
+.quote {
+    font-size: 4rem;
+    column-span: all;
+    text-align: center;
+}
+
+/*
+Prevents text wrapping within the element, keeping the content
+on a single line. Useful when you want the entire phrase to break 
+to a new line together, avoiding partial breaks due to responsiveness.
+*/
+.nowrap {
+    white-space: nowrap;
+}
