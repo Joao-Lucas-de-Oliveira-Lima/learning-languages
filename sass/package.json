@@ -1,0 +1,24 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:sass": "sass --watch src/sass/styles.scss src/css/styles.css",
+    "build:sass": "sass --style=compressed --no-source-map src/sass/styles.scss prod/css/styles.css",
+    "start:html": "live-server src/",
+    "build:html": "copyfiles --up 1 src/*.html prod/",
+    "build:assets": "copyfiles --up 1 src/assets/**/* prod/",
+    "build": "npm-run-all build:*",
+    "start": "npm-run-all --parallel start:sass start:html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.89.2"
+  }
+}
