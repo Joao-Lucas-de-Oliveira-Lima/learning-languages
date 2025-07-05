@@ -1,6 +1,6 @@
 # Languages Repository
 
-This repository is used to save all the code for the languages that I am currently learning. It includes code examples, exercises, and projects for various programming languages.
+This repository is used to save all the code for the languages that I am currently learning. It includes code examples, exercises, and more complex projects.
 
 ## Languages
 
@@ -9,4 +9,5 @@ This repository is used to save all the code for the languages that I am current
 - [![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](/java/)
 - [![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](/sql/)
 - [![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)](/sass/)
+- [![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)](/kotlin/)
 ---
